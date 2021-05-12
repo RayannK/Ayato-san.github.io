@@ -8,13 +8,13 @@
     <p>Get the code for this example on <a href="https://github.com/BarryCarlyon/twitch_misc/tree/main/authentication/implicit_auth">Github</a> or just View the source instead</p>
     <ul>
         <li>
-            <a href="" id="authorize_public">Authorize and get Public data</a>
+            <a href="" id="authorize_public">Autorise a donner les donées publiques</a>
         </li>
         <li>
-            <a href="" id="authorize_email">Authorize and get public data + email</a>
+            <a href="" id="authorize_email">Autorise a donner les donées publiques et le mail</a>
         </li>
     </ul>
-    <p>Après le test vous pouvez vous deconnecter de "ChromeExtension Minimat360" Application on the <a href="https://www.twitch.tv/settings/connections">Connections page</a></p>
+    <p>Après le test vous pouvez vous deconnecter de l'application "ChromeExtension Minimat360" sur <a href="https://www.twitch.tv/settings/connections">Connections page</a></p>
     <div id="access_token"></div>
     <div id="user_data"></div>
 
@@ -32,7 +32,7 @@
             var parsedHash = new URLSearchParams(window.location.hash.substr(1));
             if (parsedHash.get('access_token')) {
                 var access_token = parsedHash.get('access_token');
-                document.getElementById('access_token').textContent = 'Your Access Key from the #url: ' + access_token;
+                document.getElementById('access_token').textContent = 'Ton Token d\'accès à l\'#url: ' + access_token;
 
                 document.getElementById('user_data').textContent = 'Loading';
 
@@ -48,7 +48,7 @@
                 )
                 .then(resp => resp.json())
                 .then(resp => {
-                    document.getElementById('user_data').innerHTML = '<p>Your Public Twitch Profile from Helix:</p>';
+                    document.getElementById('user_data').innerHTML = '<p>Ton profil Twitch Public sur Helix:</p>';
                     var table = document.createElement('table');
                     document.getElementById('user_data').append(table);
                     for (var key in resp.data[0]) {
@@ -64,7 +64,7 @@
                 })
                 .catch(err => {
                     console.log(err);
-                    document.getElementById('user_data').textContent = 'Something went wrong';
+                    document.getElementById('user_data').textContent = 'SQuelque chose c\'est mal passé';
                 });
             }
         } else if (document.location.search && document.location.search != '') {
