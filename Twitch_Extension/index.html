@@ -38,8 +38,14 @@
 
                 // call API
                 fetch(
-                    'https://api.twitch.tv/helix/users',
-                    {
+//                     'https://api.twitch.tv/helix/users',
+//                     {
+//                         "headers": {
+//                             "Client-ID": client_id,
+//                             "Authorization": "Bearer " + access_token
+//                         }
+//                     }
+                    'https://api.twitch.tv/helix/search/channels?query=minimat361', {
                         "headers": {
                             "Client-ID": client_id,
                             "Authorization": "Bearer " + access_token
