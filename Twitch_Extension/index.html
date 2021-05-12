@@ -58,7 +58,7 @@
 //                     if (data == null) {
 //                         document.getElementById('user_data').innerHTML = '<p>Pas en live</p>';
 //                     }else{
-             
+                    console.log(resp.data[0]);
                     document.getElementById('user_data').innerHTML = '<p>Profil Twitch Public sur Helix:</p>';
                     var table = document.createElement('table');
                     document.getElementById('user_data').append(table);
