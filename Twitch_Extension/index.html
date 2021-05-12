@@ -54,9 +54,9 @@
                 )
                 .then(resp => resp.json())
                 .then(resp => {
-                    if (data == null) {
-                        document.getElementById('user_data').innerHTML = '<p>Pas en live</p>';
-                    }else{
+//                     if (data == null) {
+//                         document.getElementById('user_data').innerHTML = '<p>Pas en live</p>';
+//                     }else{
              
                     document.getElementById('user_data').innerHTML = '<p>Profil Twitch Public sur Helix:</p>';
                     var table = document.createElement('table');
@@ -71,7 +71,7 @@
                         td.textContent = resp.data[0][key];
                         tr.append(td);
                     }
-                    }
+//                     }
                 })
                 .catch(err => {
                     console.log(err);
