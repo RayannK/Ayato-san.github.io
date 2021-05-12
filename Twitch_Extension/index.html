@@ -1,7 +1,7 @@
-<html>
+<html lang="fr">
 <head>
     <title>Twitch Implicit Auth Example</title>
-    <link rel="stylesheet" href="/twitch_misc/style.css" />
+<!--     <link rel="stylesheet" href="/twitch_misc/style.css" /> -->
 </head>
 <body>
     <p><a href="https://dev.twitch.tv/docs/authentication/getting-tokens-oauth#oauth-implicit-code-flow" target="_blank">Implicit Auth</a> is a way to get a <a href="https://dev.twitch.tv/docs/authentication#types-of-tokens" target="_blank">User Access Token</a> in a pure front end environment, it needs only a ClientID</p>
@@ -21,7 +21,7 @@
     <script type="text/javascript">
         // These are set for the GitHub Pages Example
         // Substitute as needed
-        var client_id = 'hozgh446gdilj5knsrsxxz8tahr3koz';
+        var client_id = 'yw30p1c74gn3750sbh69nvst7fc121';
         var redirect = 'https://barrycarlyon.github.io/twitch_misc/authentication/implicit_auth/';
 
         document.getElementById('authorize_public').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token');
