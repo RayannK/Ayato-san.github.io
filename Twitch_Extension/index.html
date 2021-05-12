@@ -32,7 +32,7 @@
             var parsedHash = new URLSearchParams(window.location.hash.substr(1));
             if (parsedHash.get('access_token')) {
                 var access_token = parsedHash.get('access_token');
-                document.getElementById('access_token').textContent = 'Ton Token d\'accès à l\'#url: ' + access_token;
+                document.getElementById('access_token').textContent = 'Ton Token OAuth: ' + access_token;
 
                 document.getElementById('user_data').textContent = 'Loading';
 
@@ -64,7 +64,7 @@
                 })
                 .catch(err => {
                     console.log(err);
-                    document.getElementById('user_data').textContent = 'SQuelque chose c\'est mal passé';
+                    document.getElementById('user_data').textContent = 'Quelque chose c\'est mal passé';
                 });
             }
         } else if (document.location.search && document.location.search != '') {
